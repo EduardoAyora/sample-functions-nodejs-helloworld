@@ -1,8 +1,9 @@
-function main(args) {
-    let name = args.name || 'stranger'
-    let greeting = 'Hello ' + name + '!'
-    console.log(greeting)
-    return {"body": greeting}
-  }
+const fetch = require('node-fetch');
 
-exports.main = main
+async function main(args) {
+  //const res = await fetch('http://143.198.108.130')
+  const res = await fetch('http://10.124.0.2')
+  return res.json()
+}
+
+module.exports.main = main;
